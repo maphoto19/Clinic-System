@@ -1,0 +1,154 @@
+﻿@model Clinic_System.Models.Patient
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmerLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmerLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmerAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmerAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmerCell)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmerCell)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Insured)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Insured)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InsurCompa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InsurCompa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InsurAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InsurAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InsurCell)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InsurCell)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsVaccinated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsVaccinated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdNumber }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

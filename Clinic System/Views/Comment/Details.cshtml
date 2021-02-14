@@ -1,0 +1,82 @@
+﻿@model Clinic_System.Models.Comment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Comment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complaint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complaint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Campu.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Campu.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentType.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentType.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommunicationMethod.Method)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommunicationMethod.Method)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalPractitioner.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalPractitioner.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority.Type)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

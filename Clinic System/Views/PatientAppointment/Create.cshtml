@@ -1,0 +1,224 @@
+﻿@model Clinic_System.Models.PatientAppointment
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="https://lipis.github.io/bootstrap-sweetalert/lib/sweet-alert.js"></script>
+    <link href="~/Content/sweetalert/sweet-alert.css" rel="stylesheet" />
+
+    <style>
+        .note {
+            text-align: center;
+            height: 50px;
+            background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+            color: #fff;
+            font-weight: bold;
+            line-height: 50px;
+        }
+
+        .form-content {
+            padding: 5%;
+            border: 1px solid #ced4da;
+            margin-bottom: 2%;
+        }
+
+        .form-control {
+            border-radius: 1.5rem;
+        }
+
+        .btnSubmit {
+            border: none;
+            border-radius: 1.5rem;
+            padding: 1%;
+            width: 20%;
+            cursor: pointer;
+            background: #0062cc;
+            color: #fff;
+        }
+    </style>
+</head>
+@using (Html.BeginForm("Create", "PatientAppointment", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <body>
+        <div class="container register-form">
+            <div class="form">
+                <div class="note">
+                    <p>Appointment: Personal Infomation</p>
+                </div>
+
+                <div class="form-content">
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.DropDownList("TitleId", null, htmlAttributes: new { @class = "form-control" })
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Name), @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.LastName), @required = "required" } })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Address), @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.DropDownList("GenderId", null, htmlAttributes: new { @class = "form-control" })
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.StudentNumber, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.StudentNumber), @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.StudentNumber, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.ID_Number, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.ID_Number), @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.ID_Number, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="note" style="margin-bottom:20px">
+                        <p>Contact Details</p>
+                    </div>
+
+
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cellphone, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Cellphone), @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Cellphone, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Cellphone2, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Cellphone2), @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Cellphone2, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Email), @required = "required" } })
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="note" style="margin-bottom:20px">
+                        <p>Medical Information</p>
+                    </div>
+                    <br />
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Symptoms, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Symptoms), @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Symptoms, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Comorbidity, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Comorbidity), @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Comorbidity, "", new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.DropDownList("PractId", null, htmlAttributes: new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.DropDownList("OptionId", null, htmlAttributes: new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.DropDownList("TimeId", null, htmlAttributes: new { @class = "form-control" })
+                            </div>
+                        </div>
+
+                    </div>
+                    <button type="submit" class="btnSubmit">Submit</button>
+
+                </div>
+        </div>
+
+
+    </body>
+
+}
+
+</html>

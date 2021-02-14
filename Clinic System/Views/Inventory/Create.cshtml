@@ -1,0 +1,196 @@
+﻿@model Clinic_System.Models.Inventory
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="https://lipis.github.io/bootstrap-sweetalert/lib/sweet-alert.js"></script>
+    <link href="~/Content/sweetalert/sweet-alert.css" rel="stylesheet"/>
+
+    <style>
+        .note {
+            text-align: center;
+            height: 50px;
+            background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+            color: #fff;
+            font-weight: bold;
+            line-height: 50px;
+        }
+
+        .form-content {
+            padding: 5%;
+            border: 1px solid #ced4da;
+            margin-bottom: 2%;
+        }
+
+        .form-control {
+            border-radius: 1.5rem;
+        }
+
+        .btnSubmit {
+            border: none;
+            border-radius: 1.5rem;
+            padding: 1%;
+            width: 20%;
+            cursor: pointer;
+            background: #0062cc;
+            color: #fff;
+        }
+    </style>
+</head>
+@using (Html.BeginForm("Create", "Inventory", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+<body>
+    <div class="container register-form">
+        <div class="form">
+            <div class="note">
+                <p>Clinic Assets</p>
+            </div>
+
+            <div class="form-content">
+                <div class="row">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.DropDownList("CampusId", null, htmlAttributes: new { @class = "form-control" })
+
+                        </div>
+                        <div class="form-group">
+                            @Html.DropDownList("CategoryId", null, htmlAttributes: new { @class = "form-control" })
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.DropDownList("AssetDescriptionId", null, htmlAttributes: new { @class = "form-control" })
+
+                        </div>
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.Model, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Model), @required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Price) } })
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.Quantity, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Quantity) , @required = "required" } })
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.SerialNumber, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.SerialNumber) } })
+
+                        </div>
+                        <div class="form-group">
+                            @Html.DropDownList("SupplierId", null, htmlAttributes: new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.DropDownList("UsageTypeId", null, htmlAttributes: new { @class = "form-control" })
+
+                        </div>
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Location), @required = "required" } })
+                            @Html.ValidationMessageFor(model => model.Model, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.AssetColor, new { htmlAttributes = new { @class = "form-control", @id = "assetColor", placeholder = @Html.DisplayNameFor(m => m.AssetColor) } })
+
+                        </div>
+                        <div class="checkbox">
+                            <div class="form-check">
+                                @Html.EditorFor(model => model.Guarantee, new { htmlAttributes = new { @class = "form-check-input", @id = "invalidCheck1" } })
+                                <label class="form-check-label" for="invalidCheck1">
+                                    Under Guarantee?
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="checkbox">
+                            <div class="form-check">
+                                @Html.EditorFor(model => model.Warranty, new { htmlAttributes = new { @class = "form-check-input", @id = "invalidCheck2" } })
+                                <label class="form-check-label" for="invalidCheck2">
+                                    Under Warranty?
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Description), @required = "required" } })
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <button type="submit" onclick="return validateData();" class="btnSubmit">Submit</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        function validateData() {
+
+            if ($("#assetColor").val() == "") {
+                swal("Please enter assetColor !");
+                return false;
+            } else if ($("#OrderPrice").val() == "") {
+                swal("Please enter OrderPrice !");
+                return false;
+            } else {
+                return true;
+            }
+        }  
+    </script>
+
+   
+</body>
+    
+}
+
+</html>

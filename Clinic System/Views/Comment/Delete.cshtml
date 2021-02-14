@@ -1,0 +1,88 @@
+﻿@model Clinic_System.Models.Comment
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Comment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Complaint)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Complaint)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Campu.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Campu.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentType.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentType.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommunicationMethod.Method)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommunicationMethod.Method)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicalPractitioner.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicalPractitioner.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority.Type)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,154 @@
+﻿@model Clinic_System.Models.PatientAppointment
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>PatientAppointment</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Symptoms)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Symptoms)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Cellphone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Cellphone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Cellphone2)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Cellphone2)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StudentNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ID_Number)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ID_Number)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Comorbidity)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Comorbidity)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Gender.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.HealthOption.CheckUpOption)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.HealthOption.CheckUpOption)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MedicalPractitioner.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MedicalPractitioner.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TimePreference.TimePreference1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TimePreference.TimePreference1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UserTitle.TitleName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.UserTitle.TitleName)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Clinic_System.Models.Patient>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmerLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmerAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmerCell)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Insured)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InsurCompa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InsurAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InsurCell)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsVaccinated)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmerLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmerAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmerCell)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Insured)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InsurCompa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InsurAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InsurCell)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsVaccinated)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdNumber }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdNumber }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdNumber })
+        </td>
+    </tr>
+}
+
+</table>

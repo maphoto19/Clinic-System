@@ -1,0 +1,195 @@
+﻿@model Clinic_System.Models.User
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="https://lipis.github.io/bootstrap-sweetalert/lib/sweet-alert.js"></script>
+    <link href="~/Content/sweetalert/sweet-alert.css" rel="stylesheet" />
+
+    <style>
+        .note {
+            text-align: center;
+            height: 50px;
+            background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+            color: #fff;
+            font-weight: bold;
+            line-height: 50px;
+        }
+
+        .form-content {
+            padding: 5%;
+            border: 1px solid #ced4da;
+            margin-bottom: 2%;
+        }
+
+        .form-control {
+            border-radius: 1.5rem;
+        }
+
+        .btnSubmit {
+            border: none;
+            border-radius: 1.5rem;
+            padding: 1%;
+            width: 20%;
+            cursor: pointer;
+            background: #0062cc;
+            color: #fff;
+        }
+    </style>
+</head>
+@using (Html.BeginForm("Registration", "Auth", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    <body>
+        <div class="container register-form">
+            <div class="form">
+                <div class="note">
+                    <p>User Details</p>
+                </div>
+
+                <div class="form-content">
+                    @if (ViewBag.Status != null && Convert.ToBoolean(ViewBag.Status))
+                    {
+                        if (ViewBag.Message != null)
+                        {
+                            <div class="alert alert-success">
+                                <strong>Success!</strong>@ViewBag.Message
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="row">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Name), @required = "required" } })
+
+                                </div>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.LastName), @required = "required" } })
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.DropDownList("TitleID", null, htmlAttributes: new { @class = "form-control" })
+
+                                </div>
+                                <div class="form-group">
+                                    @Html.DropDownList("GenderID", null, htmlAttributes: new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.PractitionerNum, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.PractitionerNum), @required = "required" } })
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ID_Number, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.ID_Number), @required = "required" } })
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="note">
+                            <p>Contact Details</p>
+                        </div>
+                        <br />
+
+                        <div class="row">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Phone), @required = "required" } })
+
+                                </div>
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Address), @required = "required" } })
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Email), @required = "required" } })
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="note">
+                            <p>User Password</p>
+                        </div>
+                        <br />
+                        <div class="row">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.Password), @required = "required" } })
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    @Html.EditorFor(model => model.ConfirmPassword, new { htmlAttributes = new { @class = "form-control", placeholder = @Html.DisplayNameFor(m => m.ConfirmPassword), @required = "required" } })
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="note">
+                            <p>User Type</p>
+                        </div>
+                        <br />
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                @Html.DropDownList("EmployeeTypeID", null, htmlAttributes: new { @class = "form-control" })
+
+                            </div>
+
+                        </div>
+                    }
+
+                    <hr />
+                    <button type="submit" class="btnSubmit">Submit</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </body>
+
+}
+
+</html>

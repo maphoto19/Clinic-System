@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8e252905cbe84aba97dedd302530641c" Name="Diagram1">
+        <EntityTypeShape EntityType="ClinicSysDbModel.AssetCategory" Width="1.5" PointX="6" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.AssetDescription" Width="1.5" PointX="6" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.AssetUsageType" Width="1.5" PointX="6" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Campu" Width="1.5" PointX="6" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.ClinicType" Width="1.5" PointX="6" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Comment" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.CommentType" Width="1.5" PointX="6" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.CommunicationMethod" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Country" Width="1.5" PointX="11.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.EmployeeType" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Gender" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.HealthClinic" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.HealthOption" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Institution" Width="1.5" PointX="11.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.InstitutionType" Width="1.5" PointX="9" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Inventory" Width="1.5" PointX="8.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.MedicalPractitioner" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Patient" Width="1.5" PointX="14" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.PatientAppointment" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Priority" Width="1.5" PointX="6" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Race" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Role" Width="1.5" PointX="9" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Speciality" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Status" Width="1.5" PointX="5.25" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Supplier" Width="1.5" PointX="6" PointY="33" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.TimePreference" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.Type" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.User" Width="1.5" PointX="6" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.UserRoleMapping" Width="1.5" PointX="11.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicSysDbModel.UserTitle" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Inventory_AssetCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Inventory_AssetDescription" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Inventory_AssetUsageType" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Comment_Campus" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_HealthClinic_Campus" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Institution_Campus" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Inventory_Campus" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_HealthClinic_ClinicType" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Comment_CommentType" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Comment_CommunicationMethod" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Comment_MedicalPractitioner" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Comment_Priority" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Patient_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_MedicalPractitioner_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_PatientAppointment_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_User_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_PatientAppointment_HealthOption" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Institution_InstitutionType" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Inventory_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_MedicalPractitioner_MedicalPractitioner" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_MedicalPractitioner_Race" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_MedicalPractitioner_Speciality" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_MedicalPractitioner_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_PatientAppointment_MedicalPractitioner" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_PatientAppointment_TimePreference" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_PatientAppointment_UserTitle" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK__UserRoleM__RoleI__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_Status_TimePreference" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK__UserRoleM__UserI__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicSysDbModel.FK_User_UserTitle" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
